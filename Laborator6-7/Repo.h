@@ -11,7 +11,8 @@ public:
 	void addElem(const T& el);
 	vector <T> getAll();
 	void deleteElem(int pos);
-	T getElemPos(int pos);
+	void deleteElemById(int id);
+	T getElemById(int id);
 	int getSize();
 };
 
@@ -37,9 +38,20 @@ inline void Repo<T>::deleteElem(int pos)
 }
 
 template<class T>
-inline T Repo<T>::getElemPos(int pos)
+inline void Repo<T>::deleteElemById(int id)
 {
-	return this->elem.at(pos);
+	for (int i = 0; i < this->elem.size(); i++) 
+		if (this->elem[i].getId() == id)
+			this->elem.erase(this->elem.begin() + i);
+}
+
+template<class T>
+inline T Repo<T>::getElemById(int id)
+{
+	for (int i = 0; i < this->elem.size(); i++) 
+		if (this->elem[i].getId() == id)
+			return this->elem.at(i);
+	
 }
 
 template<class T>

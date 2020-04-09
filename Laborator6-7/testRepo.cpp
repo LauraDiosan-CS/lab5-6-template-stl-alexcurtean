@@ -14,12 +14,12 @@ void testRepository()
 	repo.addElem(rc2);
 
 	assert(repo.getSize() == 2);
-	assert(repo.getElemPos(0).getId() == 1);
+	assert(repo.getElemById(1).getId() == 1);
 	assert(repo.getAll()[1].getEliberata() == false);
 
-	repo.deleteElem(0);
+	repo.deleteElemById(1);
 	assert(repo.getSize() == 1);
-	assert(repo.getElemPos(0).getId() == 2);
+	assert(repo.getElemById(2).getNumar() =="20");
 
 	RezervareCamera rc3(10, "100", "tripla", true);
 	repo.addElem(rc3);
