@@ -19,5 +19,8 @@ public:
 	void printRezervareById(int id);
 
 	void updateRezervare(int id, bool newEliberata);
+
+	int percentageOfOccupancy(string tip);
+	void printPercentageOfOcuppancy();
 };
 

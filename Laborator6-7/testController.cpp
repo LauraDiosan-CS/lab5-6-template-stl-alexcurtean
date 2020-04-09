@@ -15,6 +15,11 @@ void testCtrl()
 	assert(repo.getSize() == 2);
 	assert(repo.getElemById(2).getEliberata() == false);
 
+	int tripla = ctrl.percentageOfOccupancy("tripla");
+	assert(tripla == 0);
+	int dubla = ctrl.percentageOfOccupancy("dubla");
+	assert(dubla == 100);
+
 	ctrl.deleteRezervare(1);
 	assert(repo.getSize() == 1);
 	assert(repo.getAll()[0].getNumar() == "20");

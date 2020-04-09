@@ -14,7 +14,7 @@ int Ui::printMenu()
 	cout << "3.Afiseaza o rezervare cu un anumit id." << endl;
 	cout << "4.Sterge o rezervare." << endl;
 	cout << "5.Modifica o rezervare." << endl;
-
+	cout << "6.Afiseaza procentul de eliberare al camerelor." << endl;
 	cout << "Alege o optiune:";
 	cin >> opt;
 
@@ -30,6 +30,7 @@ void Ui::run()
 	this->ctrl.addRezervare(2, "20", "tripla", false);
 	this->ctrl.addRezervare(3, "94", "dubla", true);
 	this->ctrl.addRezervare(4, "37", "cvadrupla", true);
+	this->ctrl.addRezervare(5, "100", "vip", false);
 
 
 	int option = printMenu();
@@ -78,6 +79,10 @@ void Ui::run()
 			cout << "Eliberata:";
 			cin >> newEliberata;
 			this->ctrl.updateRezervare(id, newEliberata);
+			break;
+		}
+		case 6: {
+			this->ctrl.printPercentageOfOcuppancy();
 			break;
 		}
 
