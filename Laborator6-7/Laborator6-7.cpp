@@ -6,6 +6,7 @@
 #include "testRepo.h"
 #include "testController.h"
 #include "Repo.h"
+#include "RepoFile.h"
 #include "RezervareCamera.h"
 #include "Controller.h"
 #include "Ui.h"
@@ -16,10 +17,11 @@ int main()
     testRepository();
     testCtrl();
 
-    Repo <RezervareCamera> repo;
+    RepoFile <RezervareCamera> repo;
     Controller ctrl(repo);
     Ui ui(ctrl);
     ui.run();
+    return 0;
 }
 
 

@@ -3,7 +3,7 @@
 class Ui
 {
 private:
-	Controller ctrl;
+	Controller &ctrl;
 	int printMenu();
 public:
 	Ui(Controller &ctrl) : ctrl{ ctrl } {}

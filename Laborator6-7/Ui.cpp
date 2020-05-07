@@ -1,6 +1,6 @@
 #include "Ui.h"
 #include <iostream>
-
+#include "Controller.h"
 using namespace std;
 
 int Ui::printMenu()
@@ -26,11 +26,12 @@ int Ui::printMenu()
 
 void Ui::run()
 {
-	this->ctrl.addRezervare(1, "10", "dubla", true);
+	/*this->ctrl.addRezervare(1, "10", "dubla", true);
 	this->ctrl.addRezervare(2, "20", "tripla", false);
 	this->ctrl.addRezervare(3, "94", "dubla", true);
 	this->ctrl.addRezervare(4, "37", "cvadrupla", true);
 	this->ctrl.addRezervare(5, "100", "vip", false);
+	*/
 
 
 	int option = printMenu();
@@ -38,7 +39,8 @@ void Ui::run()
 	{
 		switch (option) 
 		{
-		case 1: {
+		case 1: 
+		{
 			int id;
 			string nr, tip;
 			bool eliberata;

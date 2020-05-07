@@ -1,16 +1,20 @@
 #pragma once
 #include "Repo.h"
 #include "RezervareCamera.h"
+#include "RepoFile.h"
 #include <string>
+
 using namespace std;
 
 class Controller
 {
 private:
-	Repo <RezervareCamera>& repo;
+	RepoFile<RezervareCamera>& repo;
 public:
-	Controller(Repo <RezervareCamera> &repo) : repo{ repo } {}
+	Controller(RepoFile <RezervareCamera> &repo) : repo{ repo } {}
 	
+	void loadFromFileCtrl();
+
 	void addRezervare(int id, string nr, string tip, bool eliberata);
 
 	void deleteRezervare(int id);

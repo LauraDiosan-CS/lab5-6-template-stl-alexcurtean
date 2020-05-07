@@ -6,7 +6,7 @@
 
 void testCtrl()
 {
-	Repo <RezervareCamera> repo;
+	RepoFile <RezervareCamera> repo;
 	Controller ctrl(repo);
 
 	ctrl.addRezervare(1, "15", "dubla", true);

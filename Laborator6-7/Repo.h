@@ -5,7 +5,7 @@
 template <class T>
 class Repo
 {
-private:
+protected:
 	vector <T> elem;
 public:
 	void addElem(const T& el);

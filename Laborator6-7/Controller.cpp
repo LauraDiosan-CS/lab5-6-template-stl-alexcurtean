@@ -1,6 +1,11 @@
 #include "Controller.h"
 #include "RezervareCamera.h"
 
+void Controller::loadFromFileCtrl()
+{
+	this->repo.loadFromFile();
+}
+
 void Controller::addRezervare(int id, string nr, string tip, bool eliberata)
 {
 	RezervareCamera rc(id, nr, tip, eliberata);
